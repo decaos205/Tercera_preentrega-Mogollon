@@ -1,0 +1,36 @@
+{% extends 'aplicacion/index.html' %}
+
+
+{% block titulo %}
+<h1 class="mb-5">Usuarios</h1>
+
+<!--<a href="{% url 'usuario_form' %}" class="btn">Agregar usuario</a>-->
+{% endblock titulo %}
+
+
+
+
+{% block contenido %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Email</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for u in usuario %}
+        <tr>
+            <td>{{ u.id }}</td>
+            <td>{{ u.nombre }}</td>
+            <td>{{ u.apellido }}</td>
+            <td>{{ u.email }}</td>
+            <td>{{ u.edad }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock contenido %}
