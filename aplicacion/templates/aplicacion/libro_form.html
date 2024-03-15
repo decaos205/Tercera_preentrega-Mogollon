@@ -2,7 +2,7 @@
 
 
 {% block titulo %}
-    <h1 class="mb-5">Agregar usuario (Formulario)</h1>
+    <h1 class="mb-5">Agregar Libro (Formulario)</h1>
 {% endblock titulo %}
 
 
@@ -10,10 +10,9 @@
 <form action="" method="post">
     {% csrf_token %}
     <table>
-        {{miForm.as_table}}
+        {{form.as_table}}
     </table>
     
     <input type="submit" value="Guardar">
 </form>
 {% endblock contenido %}
-    

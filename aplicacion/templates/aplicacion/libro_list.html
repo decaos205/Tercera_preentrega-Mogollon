@@ -1,0 +1,35 @@
+{% extends 'aplicacion/index.html' %}
+
+
+{% block titulo %}
+<h1 class="mb-5">Libros</h1>
+{% endblock titulo %}
+
+
+
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Titulo</th>
+            <th>Autor</th>
+            <th>Editorial</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for l in libro_list %}
+        <tr>
+            <td>{{ l.id }}</td>
+            <td>{{ l.titulo }}</td>
+            <td>{{ l.autor }}</td>
+            <td>{{ l.editorial }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url 'lib_create' %}" class="btn btn-primary">Agregar Libro</a>
+{% endblock contenido %}

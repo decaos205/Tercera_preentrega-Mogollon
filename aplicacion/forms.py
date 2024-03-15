@@ -13,5 +13,5 @@ class LibroForm(forms.Form):
 
 class comentarioForm(forms.Form):
     usuario = forms.CharField(max_length=50, required=True)
-    comentario = forms.CharField(max_length=100, required=True)
+    comentario = forms.CharField(max_length=50, required=True)
     

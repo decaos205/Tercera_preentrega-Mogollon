@@ -19,24 +19,17 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Inicio</a>
+                <a class="navbar-brand" href="{% url 'home' %}">Inicio</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Buscar</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'buscar_libros' %}">Buscar</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'usuarios' %}">Usuario</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Libro</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Comentario</a></li>
-                       <!--<li class="nav-item"><a class="nav-link" href="#!">Libro</a></li>-->
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'libros' %}">Libro</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'comentarios' %}">Comentario</a></li>
+                       
                         
                     </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
                 </div>
             </div>
         </nav>
@@ -54,12 +47,11 @@
                         
                         
                         {% block contenido %}
-
-                        {% endblock contenido %}
                         <p class="lead">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium at dolorem quidem modi. Nam sequi consequatur obcaecati excepturi alias magni, accusamus eius blanditiis delectus ipsam minima ea iste laborum vero?
                         </p>
+                        {% endblock contenido %}                        
                         
                             
                         
@@ -68,6 +60,8 @@
                 </div>
             </div>
         </section>
+
+        
         <!-- Related items section-->
         
         <!-- Footer-->

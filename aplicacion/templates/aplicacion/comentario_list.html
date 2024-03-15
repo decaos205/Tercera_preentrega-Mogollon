@@ -1,0 +1,34 @@
+{% extends 'aplicacion/index.html' %}
+
+
+{% block titulo %}
+<h1 class="mb-5">Comentarios</h1>
+{% endblock titulo %}
+
+
+
+
+{% block contenido %}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Usuario</th>
+            <th>Comentario</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for c in comentario_list %}
+        <tr>
+            <td>{{ c.id }}</td>
+            <td>{{ c.usuario }}</td>
+            <td>{{ c.comentario }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<a href="{% url 'comm_create' %}" class="btn btn-primary">Agregar Comentario</a>
+
+{% endblock contenido %}
