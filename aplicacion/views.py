@@ -19,14 +19,14 @@ def buscarLibros(request):
     return render(request, 'aplicacion/buscar.html')
 
 def encontrarLibros(request):
-    if request.GET['buscar']:
-        patron=request.GET['buscar']
+    if request.GET["buscar"]:
+        patron=request.GET["buscar"]
         libros=Libro.objects.filter(titulo__icontains=patron)
-        contexto={'libros':libros}
+        contexto={'libro_list':libros}
         return render(request, 'aplicacion/libro_list.html', contexto)
     
-    contexto={'libros':Libro.objects.all()}
-    return render(request, 'aplicacion/buscar.html', contexto)
+    contexto={'libro_list':Libro.objects.all()}
+    return render(request, 'aplicacion/libro_list.html', contexto)
 
 
 #___________________________________________________________________________ Usuarios
